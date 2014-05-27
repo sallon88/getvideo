@@ -35,6 +35,10 @@ module Getvideo
       end
     end
 
+    def mobile
+      "http://www.tudou.com/programs/view/html5embed.action?code=#{page_get_icode}&lcode=#{page_get_lcode}"
+    end
+
     def title
       if page_get_title.encoding != 'UTF-8'
         CGI.unescapeHTML(page_get_title)
