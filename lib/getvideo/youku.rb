@@ -36,6 +36,10 @@ module Getvideo
       "http://v.youku.com/player/getM3U8/vid/#{videoid}/type/flv/ts/v.m3u8" 
     end
 
+    def mobile
+      "http://player.youku.com/embed/#{id}"
+    end
+
     def media(type = nil)
       video_list = {}
       if data = response["data"]

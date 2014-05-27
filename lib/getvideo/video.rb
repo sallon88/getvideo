@@ -29,19 +29,21 @@ module Getvideo
     def flash; end
     def m3u8; end
     def media; end
+    def mobile;end
 
     def play_media
       media["mp4"][0] if media["mp4"]
     end
 
     def json
-      {id: id,
+      {
+        id: id,
         url: html_url,
         cover: cover,
         title: title,
-        m3u8: m3u8,
         flash: flash,
-        media: play_media}.to_json
+        mobile: mobile
+      }.to_json
     end
 
     class << self
